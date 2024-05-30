@@ -1,0 +1,293 @@
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins",
+    sans-serif;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0faff;
+}
+.wrapper {
+  position: relative;
+  max-width: 470px;
+  width: 100%;
+  border-radius: 12px;
+  padding: 20px
+    30px
+    120px;
+  background: #4070f4;
+  box-shadow: 0
+    5px
+    10px
+    rgba(
+      0,
+      0,
+      0,
+      0.1
+    );
+  overflow: hidden;
+}
+.form.login {
+  position: absolute;
+  left: 50%;
+  bottom: -86%;
+  transform: translateX(
+    -50%
+  );
+  width: calc(
+    100% +
+      220px
+  );
+  padding: 20px
+    140px;
+  border-radius: 50%;
+  height: 100%;
+  background: #fff;
+  transition: all
+    0.6s
+    ease;
+}
+.wrapper.active
+  .form.login {
+  bottom: -15%;
+  border-radius: 35%;
+  box-shadow: 0 -5px
+    10px rgba(0, 0, 0, 0.1);
+}
+.form
+  header {
+  font-size: 30px;
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+.form.login
+  header {
+  color: #333;
+  opacity: 0.6;
+}
+.wrapper.active
+  .form.login
+  header {
+  opacity: 1;
+}
+.wrapper.active
+  .signup
+  header {
+  opacity: 0.6;
+}
+.wrapper
+  form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 40px;
+}
+form
+  input {
+  height: 60px;
+  outline: none;
+  border: none;
+  padding: 0
+    15px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
+  border-radius: 8px;
+  background: #fff;
+}
+.form.login
+  input {
+  border: 1px
+    solid
+    #aaa;
+}
+.form.login
+  input:focus {
+  box-shadow: 0
+    1px 0
+    #ddd;
+}
+form
+  .checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.checkbox
+  input[type="checkbox"] {
+  height: 16px;
+  width: 16px;
+  accent-color: #fff;
+  cursor: pointer;
+}
+form
+  .checkbox
+  label {
+  cursor: pointer;
+  color: #fff;
+}
+form a {
+  color: #333;
+  text-decoration: none;
+}
+form
+  a:hover {
+  text-decoration: underline;
+}
+form
+  input[type="submit"] {
+  margin-top: 15px;
+  padding: none;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.form.login
+  input[type="submit"] {
+  background: #4070f4;
+  color: #fff;
+  border: none;
+}
+/* -------------JAZZ CASH */
+
+/* body {
+    font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  } */
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+  }
+
+  header.masthead {
+    position: relative;
+    background-color: #343a40;
+    background: url("../img/bg-masthead.jpg") no-repeat center center;
+    background-size: cover;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+
+  header.masthead .overlay {
+    position: absolute;
+    background-color: #212529;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+  }
+  .header-bg-dark{
+      background-color: #273E4A!important;
+  }
+  .showcase .container {
+    min-height: 350px;
+    background-color: #F9F9F9;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .call-to-action {
+    position: relative;
+    background-color: #343a40;
+    background: url("../img/bg-masthead.jpg") no-repeat center center;
+    background-size: cover;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+
+  .call-to-action .overlay {
+    position: absolute;
+    background-color: #212529;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+  }
+
+  .padall {
+    padding: 3px;
+  }
+  footer.footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .footer-bg-dark {
+      background-color: #263E4A!important;
+  }
+  .list-inline {
+   list-style-type: none;
+  }
+
+  .list-inline-item a {
+      color:#FFFFFF;
+      padding-bottom: 1rem;
+  }
+
+
+
+  #event-calendar table {
+      width: 100%;
+    }
+
+    #event-calendar table tr th {
+        border: 1px solid #ddd;
+        width: 80px;
+        height: 30px;
+        text-align: center;
+        color: gray;
+        font-size: 14px;
+        font-weight: 400;
+    }
+  #event-calendar table tr td {
+      border: 1px solid #ddd;
+      width: 80px;
+      text-align: center;
+  }
+  #event-calendar .calendar tr td:last-child>a {
+      color: #C4C4C4;
+  }
+  #event-calendar .calendar td>a {
+      position: relative;
+      z-index: 2;
+      font-size: 20px;
+      font-weight: 300;
+  }
+  #event-calendar .calendar td div.highlight {
+      background-color: #EEEEEE;
+      color: red;
+      width: 100%;
+      left: 0;
+      right: 1px;
+      position: absolute;
+      top: 0;
+      bottom: 1px;
+      z-index: 0;
+  }
+  #event-calendar .calendar td {
+      position: relative;
+  }
+  #event-calendar table tr td {
+      height: 90px;
+  }
+

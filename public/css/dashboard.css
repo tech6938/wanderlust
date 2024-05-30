@@ -1,0 +1,662 @@
+/* Main CSS Here */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+:root {
+    --background-color1: #fafaff;
+    --background-color2: #ffffff;
+    --background-color3: #ededed;
+    --background-color4: #cad7fda4;
+    --primary-color: #4b49ac;
+    --secondary-color: #0c007d;
+    --Border-color: #3f0097;
+    --one-use-color: #3f0097;
+    --two-use-color: #5500cb;
+}
+body {
+    background-color: var(--background-color4);
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+header {
+    height: 70px;
+    width: 100vw;
+    padding: 0 30px;
+    background-color: var(--background-color1);
+    position: fixed;
+    z-index: 100;
+    box-shadow: 1px 1px 15px rgba(161, 182, 253, 0.825);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: 600;
+    color: rgb(47, 141, 70);
+}
+
+.icn {
+    height: 30px;
+}
+.menuicn {
+    cursor: pointer;
+}
+
+.searchbar,
+.message,
+.logosec {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchbar2 {
+    display: none;
+}
+
+.logosec {
+    gap: 60px;
+}
+
+.searchbar input {
+    width: 250px;
+    height: 42px;
+    border-radius: 50px 0 0 50px;
+    background-color: var(--background-color3);
+    padding: 0 20px;
+    font-size: 15px;
+    outline: none;
+    border: none;
+}
+.searchbtn {
+    width: 50px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px 50px 50px 0px;
+    background-color: var(--secondary-color);
+    cursor: pointer;
+}
+
+.message {
+    gap: 40px;
+    position: relative;
+    cursor: pointer;
+}
+.circle {
+    height: 7px;
+    width: 7px;
+    position: absolute;
+    background-color: #fa7bb4;
+    border-radius: 50%;
+    left: 19px;
+    top: 8px;
+}
+.main-container {
+    display: flex;
+    width: 100vw;
+    position: relative;
+    top: 70px;
+    z-index: 1;
+}
+/*
+.dp {
+height: 40px;
+width: 40px;
+background-color: #626262;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+overflow: hidden;
+}
+.dpicn {
+height: 42px;
+}
+*/
+.dp {
+    position: relative;
+    display: inline-block;
+}
+
+.dpicn {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: #626262;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 50px; /* Adjust as needed */
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dp:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.main {
+    height: calc(100vh - 70px);
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 10px 10px 30px 10px;
+}
+
+.main::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(to bottom, rgb(0, 0, 85), rgb(0, 0, 50));
+}
+.main::-webkit-scrollbar {
+    width: 5px;
+}
+.main::-webkit-scrollbar-track {
+    background-color: #9e9e9eb2;
+}
+
+.box-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+.nav {
+    min-height: 91vh;
+    width: 250px;
+    background-color: var(--background-color2);
+    position: absolute;
+    top: 0px;
+    left: 00;
+    box-shadow: 1px 1px 10px rgba(198, 189, 248, 0.825);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 30px 0 20px 10px;
+}
+.navcontainer {
+    height: calc(100vh - 70px);
+    width: 250px;
+    position: relative;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    transition: all 0.5s ease-in-out;
+}
+.navcontainer::-webkit-scrollbar {
+    display: none;
+}
+.navclose {
+    width: 80px;
+}
+.nav-option {
+    width: 250px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px 0 20px;
+    gap: 20px;
+    transition: all 0.1s ease-in-out;
+}
+.nav-option:hover {
+    border-left: 5px solid #a2a2a2;
+    background-color: #dadada;
+    cursor: pointer;
+}
+.nav-img {
+    height: 30px;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-upper-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.option1 {
+    border-left: 5px solid #007bff;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+.option1:hover {
+    border-left: 5px solid #007bff;
+    background-color: #007bffd8;
+}
+
+.option2.active {
+    border-left: 5px solid #007bffd8;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+.option2.active:hover {
+    border-left: 5px solid #007bffd8;
+    background-color: #007bffd8;
+}
+
+.option4.active,.option5.active,.option6.active {
+    border-left: 5px solid #007bff;
+    background-color: #007bffd8;
+    color: white;
+    cursor: pointer;
+}
+.option4.active:hover,.option5.active:hover,.option6.active:hover {
+    border-left: 5px solid #007bff;
+    background-color: #007bffd8;
+}
+
+.box {
+    height: 130px;
+    width: 230px;
+    border-radius: 20px;
+    box-shadow: 3px 3px 10px rgba(0, 30, 87, 0.751);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+.box:hover {
+    transform: scale(1.08);
+}
+
+.box:nth-child(1) {
+    background-color: var(--one-use-color);
+}
+.box:nth-child(2) {
+    background-color: var(--two-use-color);
+}
+.box:nth-child(3) {
+    background-color: var(--one-use-color);
+}
+.box:nth-child(4) {
+    background-color: var(--two-use-color);
+}
+
+.box img {
+    height: 50px;
+}
+.box .text {
+    color: white;
+}
+.topic {
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.topic-heading {
+    font-size: 30px;
+    letter-spacing: 3px;
+}
+
+.report-container {
+    min-height: 80vh;
+    max-width: 100%;
+    margin: 20px auto 0px auto;
+    background-color: #ffffff;
+    border-radius: 30px;
+    box-shadow: 3px 3px 10px rgb(188, 188, 188);
+    padding: 0px 20px 20px 20px;
+    /* overflow-wrap: normal; */
+    overflow-block: auto;
+}
+.report-header {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px 10px 20px;
+    border-bottom: 2px solid rgba(0, 20, 151, 0.59);
+}
+
+.recent-Articles {
+    font-size: 30px;
+    font-weight: 600;
+    color: #007bff;
+}
+
+.view {
+    height: 35px;
+    width: 90px;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: white;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.t-op {
+    font-size: 18px;
+    letter-spacing: 0px;
+}
+
+.t-op-nextlvl {
+    font-size: 14px;
+    letter-spacing: 0px;
+    font-weight: 600;
+}
+
+.report-body {
+    /* Ensure table cells take up more space */
+    font-size: 16px; /* Increase font size for better readability */
+}
+table{
+
+    width: 100%;
+    border-collapse: collapse;
+    /* overflow-x: auto; */
+    overflow-wrap: normal;
+}
+
+
+.report-body th,
+.report-body td {
+    padding: 12px; /* Add padding to cells for spacing */
+    text-align: left; /* Align text within cells to the left */
+    border: 1px solid #ddd; /* Add a border around cells */
+}
+
+.report-body th {
+    background-color: #f2f2f2; /* Light gray background for table headers */
+}
+
+.report-body td.row-number {
+    /* Styling specific to the row number cell */
+    font-weight: bold; /* Make row number text bold */
+    color: #777; /* Dim row number text color */
+}
+
+.report-body td.t-op-nextlvl {
+    /* Styling specific to the data cells */
+    font-weight: normal; /* Set font weight to normal for data cells */
+}
+
+.label-tag {
+    width: 100px;
+    text-align: center;
+    background-color: rgb(0, 177, 0);
+    color: white;
+    border-radius: 4px;
+}
+
+/* Responsive CSS Here */
+@media screen and (max-width: 950px) {
+    .nav-img {
+        height: 25px;
+    }
+    .nav-option {
+        gap: 30px;
+    }
+    .nav-option h3 {
+        font-size: 15px;
+    }
+    .report-topic-heading,
+    .item1,
+    .items {
+        width: 800px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .nav-img {
+        height: 30px;
+    }
+    .nav-option {
+        gap: 30px;
+    }
+    .nav-option h3 {
+        font-size: 20px;
+    }
+    .report-topic-heading,
+    .item1,
+    .items {
+        width: 700px;
+    }
+    .navcontainer {
+        width: 100vw;
+        position: absolute;
+        transition: all 0.6s ease-in-out;
+        top: 0;
+        left: -100vw;
+    }
+    .nav {
+        width: 100%;
+        position: absolute;
+    }
+    .navclose {
+        left: 00px;
+    }
+    .searchbar {
+        display: none;
+    }
+    .main {
+        padding: 40px 30px 30px 30px;
+    }
+    .searchbar2 {
+        width: 100%;
+        display: flex;
+        margin: 0 0 40px 0;
+        justify-content: center;
+    }
+    .searchbar2 input {
+        width: 250px;
+        height: 42px;
+        border-radius: 50px 0 0 50px;
+        background-color: var(--background-color3);
+        padding: 0 20px;
+        font-size: 15px;
+        border: 2px solid var(--secondary-color);
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .message {
+        display: none;
+    }
+    .logosec {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .logo {
+        font-size: 20px;
+    }
+    .menuicn {
+        height: 25px;
+    }
+    .nav-img {
+        height: 25px;
+    }
+    .nav-option {
+        gap: 25px;
+    }
+    .nav-option h3 {
+        font-size: 12px;
+    }
+    .nav-upper-options {
+        gap: 15px;
+    }
+    .recent-Articles {
+        font-size: 20px;
+    }
+    .report-topic-heading,
+    .item1,
+    .items {
+        width: 550px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .recent-Articles {
+        font-size: 17px;
+    }
+    .view {
+        width: 60px;
+        font-size: 10px;
+        height: 27px;
+    }
+    .report-header {
+        height: 60px;
+        padding: 10px 10px 5px 10px;
+    }
+    .searchbtn img {
+        height: 20px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .recent-Articles {
+        font-size: 12px;
+    }
+    .view {
+        width: 50px;
+        font-size: 8px;
+        height: 27px;
+    }
+    .report-header {
+        height: 60px;
+        padding: 10px 5px 5px 5px;
+    }
+    .t-op {
+        font-size: 12px;
+    }
+    .t-op-nextlvl {
+        font-size: 10px;
+    }
+    .report-topic-heading,
+    .item1,
+    .items {
+        width: 300px;
+    }
+    .report-body {
+        padding: 10px;
+    }
+    .label-tag {
+        width: 70px;
+    }
+    .searchbtn {
+        width: 40px;
+    }
+    .searchbar2 input {
+        width: 180px;
+    }
+}
+
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.alert-success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+
+.btn-link {
+    text-decoration: none;
+    color: inherit;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    font: inherit;
+}
+.btn-link:hover {
+    text-decoration: underline;
+    /* Add additional hover styles as needed */
+}
+
+.report-body label {
+    display: block; /* Ensure labels are displayed as block elements */
+    margin-bottom: 8px; /* Add bottom margin for spacing between labels */
+}
+
+.report-body input[type="text"],
+.report-body input[type="number"],
+.report-body input[type="email"],
+.report-body input[type="datetime-local"],
+.report-body input[type="password"],
+.report-body textarea {
+    /* Styling for text inputs and textareas */
+    width: 100%; /* Make inputs/textarea fill the width of their container */
+    padding: 10px; /* Add padding to inputs/textarea */
+    font-size: 16px; /* Set font size for inputs/textarea */
+    border: 1px solid #ddd; /* Add a border around inputs/textarea */
+    border-radius: 4px; /* Add border radius for rounded corners */
+}
+
+.report-body select {
+    /* Styling for select dropdowns */
+    width: 100%; /* Make select dropdowns fill the width of their container */
+    padding: 10px; /* Add padding to select dropdowns */
+    font-size: 16px; /* Set font size for select dropdowns */
+    border: 1px solid #ddd; /* Add a border around select dropdowns */
+    border-radius: 4px; /* Add border radius for rounded corners */
+}
+
+/* Optional: Style for submit button */
+.submit-btn {
+    /* Styling for submit button */
+    display: block; /* Display as block element */
+    width: 100%; /* Make button fill the width of its container */
+    padding: 12px; /* Add padding to button */
+    font-size: 16px; /* Set font size for button */
+    background-color: #007bff; /* Blue background color */
+    color: #fff; /* White text color */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Add border radius for rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    margin-top: 20px;
+}
+
+/* Optional: Hover effect for submit button */
+.report-body input[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue background color on hover */
+}
+
+.text-danger {
+    color: #dc3545; /* Red color */
+    font-weight: bold; /* Optional: Make text bold */
+    /* Add more styles as needed */
+}
