@@ -137,7 +137,7 @@
                         <table id="reportTable" class="">
                             <thead>
                                 <tr>
-                                    <th class="t-op">#</th>
+                                    <th class="t-op">Sr.</th>
                                     <th class="t-op">Name</th>
                                     <th class="t-op">Email</th>
                                     <th class="t-op">Role</th>
